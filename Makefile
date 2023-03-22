@@ -2,7 +2,13 @@ CC = clang
 CXX = clang++
 STRIP = strip
 
-CFLAGS = -I. -O2 -march=native -flto
+CFLAGS = -I. -O2
+ifdef LTO
+CFLAGS += -flto
+endif
+ifdef MARCHNATIVE
+CFLAGS += -march=native
+endif
 
 PREFIX = /usr/local
 
