@@ -9,7 +9,7 @@ ifdef MARCHNATIVE
 CFLAGS += -march=native
 endif
 
-PREFIX = /usr/local
+PREFIX ?= /usr/local
 
 all: ldid
 
