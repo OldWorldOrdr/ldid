@@ -13,7 +13,7 @@ PREFIX = /usr/local
 
 all: ldid
 
-ldid: $(OBJS)
+ldid:
 	$(CXX) -o ldid ldid.cpp -x c lookup2.c -x c sha1.c $(CFLAGS)
 	$(STRIP) ldid
 
